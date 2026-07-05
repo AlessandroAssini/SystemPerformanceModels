@@ -1,0 +1,10 @@
+Question 4 - Two approaches for varying browsing fraction at 75% load:
+
+Q4a (Dynamic Lambda): For each browsing fraction, recalculates the bottleneck station 
+and uses 75% of that specific lambda_max. This keeps the system at 75% of its capacity 
+regardless of the mix, producing a smooth graph.
+
+Q4b (Fixed Lambda): Uses a single lambda_total calculated at 90/10 mix 
+(lambda_total = 0.75 * lambda_max_90/10). When the browsing fraction changes, 
+the bottleneck shifts but lambda stays fixed, causing saturation at certain mix ratios 
+(e.g., 82-85% browsing shows U > 1.0 at Frontend).

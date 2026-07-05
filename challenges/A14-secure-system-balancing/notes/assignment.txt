@@ -1,0 +1,40 @@
+
+1
+
+Automatic Zoom
+Balancing requests in a secure system 
+A system is composed by a CPU and two storage devices. One storage device, beside serving requests 
+coming from CPU, receives also traffic from an external device. The other storage device, has strict security 
+requirements, which sometimes return the request to the CPU for further processing, before completing it. 
+The goal of the administrator, is to decide a probability  with which sending the requests to the second 
+storage device, so to balance the utilization (have an identical demand) of the two disks. 
+ 
+ 
+The parameters of the model are the following: 
+ Arrival rate to the CPU   1 = 2500 req/s 
+ Arrival rate to Storage 1   2 = 1000 req/s 
+ Service time of the CPU   S1 = 0.05 ms 
+ Service time of Storage 1   S2 = 0.15 ms 
+ Service time of Storage 2   S3 = 0.25 ms 
+ Probability of returning to the CPU from Storage 2  ps2->CPU = 0.1 
+ Probability of exiting after Storage 2  ps2->0    = 0.9 
+ 
+With the given data, using analytical techniques based on a Python script (i.e. without using JMT): 
+1. Plot, on a single figure, the demand of the three stations as function of a. 
+2. Looking at the picture, find the value of a such that demand of the two disks become identical. 
+Please enter the answers, together with a ZIP file containing the .py files of your model, renamed with 
+PPTX extension, in the following form: 
+https://forms.office.com/Pages/ResponsePage.aspx?id=K3EXCvNtXUKAjjCd8ope67-
+7CBR7gDJEgHF_krAEqPhUREk0WjQ0RzVPODBZVjJaR1c4TDVUUExKVS4u 
+The deadline is Midnight, 28/11/2025 
+ 
+ 
+ 
+ −  
+ 
+ 
+Ss2 = 0.15 ms 
+Ss3 = 0.25 ms 
+SCPU = 0.05 ms 
+ =  req/s  
+ =  req/s  

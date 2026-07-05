@@ -1,0 +1,61 @@
+
+2
+
+Automatic Zoom
+Performance evaluation of a cache 
+A cache as a service time of Dhit = 0.1 ms when obtaining a hit, and an average service time of Dmiss = 5 ms 
+when obtaining a miss. Incoming requests arrive according to a Poisson process. Three cases have been 
+considered, respectively with arrival rates A = 500 j/s, B = 1000 j/s and C = 2000 j/s. Requests are served 
+in FCFS. 
+ 
+Using ChatGPT to study the problem, the following approximation of the hit probabilities have been 
+derived (written as a python function), with the cache size in the range 1~10000: 
+def hit_ratio_approx(C): 
+    """ 
+    Approximate LFU hit ratio for Zipf(alpha=1.5) with N=10000, 
+    using a rational quadratic/quadratic fit: 
+        H(C) ≈ (a + b*C + d*C^2) / (1 + f*C + g*C^2) 
+    """ 
+    a = 0.806616281 
+    b = 1.719068781e-02 
+    d = 5.050374574e-06 
+    f = 1.740607985e-02 
+    g = 5.026959698e-06 
+ 
+    C = float(C)  # ensure numeric 
+    return (a + b*C + d*C*C) / (1 + f*C + g*C*C) 
+ 
+Moreover, considering H as the average hit time, K as the average miss time, and P the hit probability, 
+ChatGPT wrote the following function to compute both the average and the variance of access time: 
+  
+def access_time_stats(P, H, K): 
+    """ 
+    Computes the mean and variance of cache access time. 
+     
+    Parameters: 
+        P : hit ratio (0 <= P <= 1) 
+        H : hit latency (seconds) 
+        K : miss latency (seconds) 
+     
+    Returns: 
+        mean_time, variance_time 
+    """ 
+    mean_time = P * H + (1 - P) * K 
+    var_time = ( 
+        P * (H - mean_time)**2 + 
+        (1 - P) * (K - mean_time)**2 
+    ) 
+    return mean_time, var_time 
+ 
+Using these helper functions: 
+1. Plot, on a single figure, the response time of three scenario as function of the cache size, with C in 
+the range 0-1000, and the average response time in the range 0-4ms. 
+2. For the three cases, find the minimum cache size required to have an average response time 
+smaller than 1ms. 
+Please enter the answers, together with a ZIP file containing the .py files of your model, renamed with 
+PPTX extension, in the following form: 
+https://forms.office.com/Pages/ResponsePage.aspx?id=K3EXCvNtXUKAjjCd8ope67-
+7CBR7gDJEgHF_krAEqPhUNkxKRUI2SFAyNkVLR0s0WkxQTDhQMkpITy4u 
+The deadline is Midnight, 23/11/2025 
+ 
+ 

@@ -1,0 +1,24 @@
+
+1
+
+Automatic Zoom
+Cost minimization in a micro-service deployment 
+A micro-service service requires on the average D = 100ms to be completed. The system has to handle a 
+large arrival rate  = 100 req/s: in order to achieve a given performance objective, requests are served by 
+N nodes. The dispatcher, put requests in a single queue all the requests, and sends it to the first available 
+node. The queue at the dispatcher has a maximum of H = 8 slots. 
+ 
+The cost for renting a node has two components: Cfix = 0.01$  that is a fixed cost payed per Node, and  
+Cvar = 0.05$, which is proportional to the Utilization of the nodes. 
+There is a QoS constraint, for which, every request that is dropped will cause a penalty of cpen = 0.15$ to the 
+system. 
+Assuming the entire system can be modelled as an M/M/c/K (with c = N and K = c + H) station, find the best 
+number of nodes N that minimizes the cost. Write a python code, which uses the MMcKSolve function 
+provided in MMcK.py to find the solution, and plot the cost as function of the number of nodes. 
+Please enter the answers, together with a ZIP file containing the .py files of your model, renamed with 
+PPTX extension, in the following form: 
+https://forms.office.com/Pages/ResponsePage.aspx?id=K3EXCvNtXUKAjjCd8ope67-
+7CBR7gDJEgHF_krAEqPhUNTFITk5JVURGRzdPUjZHWFE3RTJEQTg3SC4u 
+The deadline is Midnight, 21/11/2025 
+ 
+ 

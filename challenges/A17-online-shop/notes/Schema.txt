@@ -1,0 +1,10 @@
+	•	Source1 (source)
+→ Frontend (queue)
+	•	Frontend (queue)
+→ Sink1
+→ StorageServer (queue)
+→ DBMS (queue)
+→ PaymentProcessor (delay station)
+	•	StorageServer (queue) → Frontend
+	•	DBMS (queue) → Frontend
+	•	PaymentProcessor (delay station) → Frontend

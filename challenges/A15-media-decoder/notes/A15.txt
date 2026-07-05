@@ -1,0 +1,36 @@
+
+1
+
+Automatic Zoom
+Performance evaluation of a media decoder 
+A media decoder embedded system is composed of five elements: the de-multiplexer (De-Mux), which is a 
+pure sequential component, a set of parallel blocks that performs Entropy Decoding (ED), Inverse 
+Quantization (IQ) and Discrete Cosine Transform (DCT), a set of parallel components that performs De-
+Blocking (DB), and another set of parallel blocks that performs Motion Compensation (MC); in addition, an 
+Audio Decoder (Audio) takes care of the selected audio stream. 
+ 
+ 
+The Motion compensation is used only for 5/6 of the frames. Audio packets are 5% of the stream. The 
+system can be analyzed as a separable open model, with the following parameters: 
+ Interarrival times  400-800 packets per second. 
+ Audio decoding 12 ms. 
+ De-Mux 0.5 ms. 
+ ED – IQ - DCT 7.5 ms. 
+ DB 3 ms. 
+ MC 8 ms. 
+Considering a different encoding rate, ranging from 400 to 800 packets per second, with a step of 100 
+packets per second, find the minimum number of ED-IQ-DCT, DB and MC units required to have an average 
+response time less than 40 ms. 
+Using these helper functions, and an analytical model implemented in a Python script: 
+1. Plot a picture of the model.  You can use JMT just as a drawing tool, or any other tool, such as 
+PowerPoint. 
+2. Compute the demand of the five components. 
+3. Plot, in a single graph, the required number of ED-IQ-DCT, DB and MC units, as function of the 
+arrival rate. 
+4. Plot the obtained average response time in each configuration. 
+Please enter the answers, together with a ZIP file containing the .py files of your model, renamed with 
+PPTX extension, in the following form: 
+https://forms.office.com/Pages/ResponsePage.aspx?id=K3EXCvNtXUKAjjCd8ope67-
+7CBR7gDJEgHF_krAEqPhUNlJTWDQ3U09BSVNPTkFEQkhZS1BGVEtTRS4u 
+The deadline is Midnight, 30/11/2025 
+ 

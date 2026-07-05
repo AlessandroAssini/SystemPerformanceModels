@@ -1,0 +1,27 @@
+
+1
+
+Automatic Zoom
+Performance  evaluation  of a secure transaction  system 
+A secure transaction system,  is used  by N1 normal  users,  and N2 priority  users.  The system  is composed by 
+5 nodes,  each one implemented  by multiple  servers which  executes the requests  in parallel. The 
+parameters  of the system are the following: 
+  Service time Visits 
+Station Name Servers Normal Priority Normal Priority 
+1 Key check 3 14 s 9 s 1.4 1.0 
+2 Do the transaction 1 40 s 24 s 1.0 1.0 
+3 Encrypt 2 10 s 14 s 0.8 1.2 
+4 Log 1 20 s 12 s 1.2 0.5 
+5 Buffer oo 25 s 20 s 1.0 1.0 
+       
+N. Normal 25     
+N. Priority 15     
+ 
+Using  the provided  helper  functions,  and an analytical model  implemented  in a Python  script: 
+1. Compute  the utilization  of the first four nodes  (i.e do not consider  the buffer) 
+2. Compute  the system response  time  (excluding  the time spent  in the buffer)  for both classes, and 
+for the entire  system. 
+3. Plot, in a single  graph,  the total system  response  time (not considering  the buffer),  and the 
+response  times for the two classes  (not considering  the buffer),  taking  into account a decrease  or 
+an increase in the priority  users,  ranging  from  N2 = 5 to N2 = 35, while  keeping  the  normal users  N1 
+= 25. 

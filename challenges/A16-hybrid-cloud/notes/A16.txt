@@ -1,0 +1,30 @@
+
+1
+
+Automatic Zoom
+Performance evaluation of a Hybrid Cloud 
+The intranet of a small company, supporting N = 200 employees, is composed of a dispatcher, a private 
+cloud deployment, and services provided by a public cloud. 
+ 
+The private cloud is composed of c = 8 nodes, while other P nodes are rented from the public cloud. The 
+percentage of requests directed to the cloud is pcloud, while the remaining 1-pcloud are served on the private 
+infrastructure. All requests are first served by the dispatcher. The timings are the following: 
+ Users’ think time  50 s. 
+ Dispatcher 0.1 s. 
+ Serving a request on the private cloud 2 s. 
+ Serving a request on the publc cloud 2.5 s. 
+The system administrator can decide which services to deploy locally, and which to deploy on the cloud. 
+Considering the model as a separable model, and the number of nodes as the number of servers (the 
+dispatcher is single server, the private cloud is c servers, and the public cloud is P servers), find the 
+minimum number of cloud nodes P, and a suitable pcloud routing probability, to have an average response 
+time below 4 s. Use the provided helper functions, and an analytical model implemented in a Python script. 
+1. Plot a picture of the model.  You can use JMT just as a drawing tool, or any other tool, such as 
+PowerPoint. 
+2. Plot, on a single graph, the response time as function of pcloud, using different curves for different 
+values of P. 
+3. Find the best values for the parameters. 
+Please enter the answers, together with a ZIP file containing the .py files of your model, renamed with 
+PPTX extension, in the following form: 
+https://forms.office.com/Pages/ResponsePage.aspx?id=K3EXCvNtXUKAjjCd8ope67-
+7CBR7gDJEgHF_krAEqPhUMFRVWVlXVURDWjZTQlhDNFNCSFpCU0RMQy4u 
+The deadline is Midnight, 5/12/2025 

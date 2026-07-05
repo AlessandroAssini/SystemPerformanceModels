@@ -1,0 +1,37 @@
+
+1
+
+Automatic Zoom
+Performance evaluation of the information system of an on-line shop 
+The information system of an on-line shop is composed of three servers: a front-end, a storage server and a 
+DBMS. It can handle two type of requests: browsing catalog, a purchasing. The percentage of purchases is 
+10% of the total, while browsing is 90%. Purchase requests need to pass through an extra stage, that is the 
+payment processor, that is performed by an external service, which can be modelled as a delay station. All 
+nodes should be considered as single-server stations, and the model separable. 
+ 
+The average service timings and routing probabilities are the following: 
+   Browsing  Purchasing 
+ Front-end  0.05 s  0.30 s 
+ Storage Server  0.21 s  0.12 s 
+ DBMS  0.08 s  0.25 s 
+ Payment processor      -   1.2 s 
+ Routing prob. Front-end to:   
+ Sink 1 (leave the system)  50%   30% 
+ Storage Server  30%   15% 
+ DBMS  20%   25% 
+ Payment processor      0    30% 
+ 
+Use the provided helper functions, and an analytical model implemented in a Python script: 
+1. Compute the demands at the various station for both classes 
+2. Compute the maximum total arrival rate 
+3. Plot, in a single graph, the total system response time, and the response times for the two classes 
+as function of the total arrival rate. 
+4. Setting the arrival rate at 75% of the maximum allowed, plot, in a single graph, the total system 
+response time, and the response times for the two classes as function of fraction of Browsing 
+costumers, ranging from 0% to 100% 
+ 
+Please enter the answers, together with a ZIP file containing the .py files of your model, renamed with 
+PPTX extension, in the following form: 
+https://forms.office.com/Pages/ResponsePage.aspx?id=K3EXCvNtXUKAjjCd8ope67-
+7CBR7gDJEgHF_krAEqPhUN1EyUkpKRks4UkxCUkhIWURLT1YzOUlONi4u 
+The deadline is Midnight, 7/12/2025 

@@ -1,0 +1,9 @@
+SCENARIO A 
+Analizzando i risultati, la politica PS è chiaramente la migliore nello Scenario A. Con la distribuzione Hyper-exponential (CV = 4), che presenta un’elevata variabilità nei tempi di servizio, il tempo medio di risposta cresce rapidamente con FCFS ma rimane molto più basso con PS.
+In FCFS, i job lunghi bloccano la coda e aumentano drasticamente il tempo di attesa dei job brevi, mentre con PS tutti i job vengono serviti contemporaneamente, evitando che pochi job lunghi penalizzino gli altri. Inoltre, PS è insensibile alla variabilità: il suo tempo medio di risposta dipende solo dal carico e non dalla forma della distribuzione dei servizi.
+Pertanto, in presenza di alta variabilità, PS garantisce prestazioni nettamente migliori, mantenendo il tempo di risposta stabile anche ad alti tassi di arrivo.
+
+SCENARIO B 
+Nello Scenario B, i task seguono una distribuzione Erlang con bassa variabilità (C.v. = 0.25). In queste condizioni, i tempi di servizio sono molto simili tra loro e il rischio che un job lungo rallenti gli altri è minimo. La politica FCFS, essendo non-preemptive, permette a ciascun job di essere servito alla massima velocità del processore, senza introdurre overhead di condivisione.
+La politica PS, invece, suddivide la capacità del processore tra tutti i job presenti, rallentando inutilmente l’esecuzione in un contesto dove la variabilità è già bassa.
+Per questo motivo, FCFS garantisce tempi medi di risposta inferiori rispetto a PS in tutti i livelli di carico, risultando la scelta migliore nello Scenario B.
